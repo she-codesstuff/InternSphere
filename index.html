@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InternSphere – Internship Listings</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">InternSphere</div>
+    <div class="nav-links">
+      <a href="#" class="active">Home</a>
+      <a href="#projects">Internships</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Find Your Perfect Internship</h2>
+      <p>
+        Explore verified internship opportunities tailored for web development, 
+        cloud computing, and more — all with flexible hours and growth-focused environments.
+      </p>
+      <a href="#projects" class="hero-btn">Explore Internships</a>
+    </div>
+  </section>
+
+  <!-- SEARCH SECTION -->
+  <section class="search-section">
+    <h3 class="section-title">Search Internships</h3>
+    <input type="text" id="searchBox" placeholder="Search by title, skill, or location...">
+    <div class="filter-tags">
+      <button class="tag-btn active">All</button>
+      <button class="tag-btn">Frontend</button>
+      <button class="tag-btn">Backend</button>
+      <button class="tag-btn">Fullstack</button>
+      <button class="tag-btn">Remote</button>
+    </div>
+  </section>
+
+  <!-- INTERNSHIP LISTINGS -->
+  <section id="projects">
+    <h3 class="section-title">Available Internships</h3>
+    <div class="project-list">
+
+      <div class="project-card">
+        <h3>Web Developer Intern</h3>
+        <p><strong>Location:</strong> Remote</p>
+        <p>
+          Develop and maintain web applications using HTML, CSS, and JavaScript. 
+          Collaborate with designers, assist in backend services, and improve performance.
+        </p>
+        <p><strong>Skills:</strong> HTML, CSS, JS, React (plus), Node.js (plus)</p>
+        <p><strong>Perks:</strong> Certificate, LOR, PPO</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Frontend Developer Intern</h3>
+        <p><strong>Location:</strong> Remote</p>
+        <p>
+          Implement responsive interfaces, collaborate with UX teams, and build 
+          engaging user experiences using React and modern JavaScript frameworks.
+        </p>
+        <p><strong>Skills:</strong> HTML, CSS, React, Git</p>
+        <p><strong>Perks:</strong> PPO, Flexible Hours</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Backend Developer Intern</h3>
+        <p><strong>Location:</strong> Remote</p>
+        <p>
+          Assist in backend logic development using Node.js and Python. 
+          Build scalable APIs and integrate with frontend systems.
+        </p>
+        <p><strong>Skills:</strong> Node.js, Express, MongoDB</p>
+        <p><strong>Perks:</strong> Job Offer, Certificate</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <h3 class="section-title">About InternSphere</h3>
+    <p style="text-align:center; width:70%; margin:auto; color:#80f7ff;">
+      InternSphere is a platform connecting students with real-world learning 
+      experiences. Our mission is to empower young developers to gain 
+      exposure through verified, skill-building internships.
+    </p>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" style="text-align:center; margin:3rem 0;">
+    <h3 class="section-title">Get in Touch</h3>
+    <p>Email us: <span style="color:#00f0ff;">support@internsphere.dev</span></p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 InternSphere | Crafted with in Neon Black</p>
+  </footer>
+
+  <script>
+    // Simple filtering logic
+    const searchBox = document.getElementById('searchBox');
+    const cards = document.querySelectorAll('.project-card');
+    searchBox.addEventListener('input', () => {
+      const term = searchBox.value.toLowerCase();
+      cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        card.style.display = text.includes(term) ? 'block' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>

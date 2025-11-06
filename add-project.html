@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Project | DevConnect</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <h1>DevConnect</h1>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="add-project.html" class="active">Add Project</a>
+    </div>
+  </nav>
+
+  <main class="form-container">
+    <h2>Add a New Project</h2>
+    <form id="projectForm">
+      <label>Title</label>
+      <input type="text" id="title" required>
+
+      <label>Description</label>
+      <textarea id="description" rows="5" required></textarea>
+
+      <label>Tags (comma separated)</label>
+      <input type="text" id="tags">
+
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

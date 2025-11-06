@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevConnect | Developer Projects</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <h1 class="logo">⚡ DevConnect</h1>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="add-project.html">Add Project</a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Connect. Create. Collaborate.</h2>
+      <p>Showcase your work and discover amazing developer projects around the world.</p>
+      <a href="add-project.html" class="hero-btn">+ Add Your Project</a>
+    </div>
+  </section>
+
+  <!-- SEARCH & FILTER -->
+  <section class="search-section">
+    <input type="text" id="searchBox" placeholder="🔍 Search projects by title or tag..." onkeyup="searchProjects()"/>
+    <div class="filter-tags">
+      <button onclick="filterTag('All')" class="tag-btn active">All</button>
+      <button onclick="filterTag('Frontend')" class="tag-btn">Frontend</button>
+      <button onclick="filterTag('Backend')" class="tag-btn">Backend</button>
+      <button onclick="filterTag('Fullstack')" class="tag-btn">Fullstack</button>
+      <button onclick="filterTag('API')" class="tag-btn">API</button>
+    </div>
+  </section>
+
+  <!-- PROJECT LIST -->
+  <main>
+    <h2 class="section-title">🚀 Explore Developer Projects</h2>
+    <div id="project-list" class="project-list">
+      <!-- Cards will be added dynamically -->
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 <span>DevConnect</span> | Crafted with 💙 by Geetha K C</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
